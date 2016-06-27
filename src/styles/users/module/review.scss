@@ -70,25 +70,26 @@
       }
   }
 
-  // 输入内容为空提示框
-  .diaTips{
-    width:1.8rem;
-    line-height: .4rem;
-    text-align: center;
-    background-color: #000;
-    box-shadow: 1px 1px 2 .5 #ccc;
-    color:#fff;
-    font-size:.16rem;
-    position: fixed;
-    left:50%;
-    bottom:.5rem;
-    @include transform(translateX(-50%));
-    box-shadow:1px 1px 5px 1px #888;
-    border-radius: .05rem;
-    opacity:0;
-    &.show{
-      @include animation(opacity 1s 2 alternate);
-    }
+}
+// 输入内容为空提示框
+.diaTips{
+  width:1.8rem;
+  height:.4rem;
+  line-height: .4rem;
+  text-align: center;
+  background-color: #000;
+  box-shadow: 1px 1px 2 .5 #ccc;
+  color:#fff;
+  font-size:.16rem;
+  position: fixed;
+  left:50%;
+  bottom:.5rem;
+  @include transform(translateX(-50%));
+  box-shadow:1px 1px 5px 1px #888;
+  border-radius: .05rem;
+  opacity:0;
+  &.show{
+    @include animation(opacity 1s 2 alternate);
   }
 }
 //有输入内容提示跳转上一页
@@ -103,7 +104,7 @@
       z-index:-1;
       &.show{
         z-index: 999!important;
-        @include animation(opacity 2s 2 alternate);
+        @include animation(opacity 0.5s 2 alternate);
       }
         .diaSuc{
           width:1.6rem;

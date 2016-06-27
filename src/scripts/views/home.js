@@ -43,39 +43,46 @@ SPA.defineView('home',{
             /*加了延时器，show函数执行完，
             *然后再将数据显示在页面，故须在此时改变初始状态
             */
-            //var myScroll = that.widgets.load;
+            var myScroll = that.widgets.load;
             //scrollBy可把内容滚动指定的像素数
-            //myScroll.scrollBy(0,-30);
+            myScroll.scrollBy(0,-30);
         //  },300);
         }
       });
     },
     show:function(){
       var that = this;
-      //获取当前滚动对象
-      var mScroll = that.widgets.myScroll;
-      mScroll.options.scrollX = true;
-      mScroll.options.scrollY = false;
+
       //创建swiper对象
+      var w1 = 0, w2 = 0;
       this.mySwiper = new Swiper('#wrapper',{
         loop:false,
         //paginationClickable: true,
         onSlideChangeStart:function(swiper){
+          w1 = $('.navDiv').offset().width;
+          w2 = $('.navList').offset().width;
+          var disw = (w1-w2)/('.navList li').length;
           //监听滑动事件
           //console.log(swiper)
           var index = swiper.activeIndex;
           /*先获取到导航栏对象
            *给对应导航栏部分添加高亮
           */
+          disw = disw*index;
+          console.log(disw);
+          $('.navList').css({'left':disw+'px'});
           $('.navList li').removeClass('active').eq(index).addClass('active');
         }
        });
-
+        //获取当前滚动对象
+       var mScroll = that.widgets.myScroll;
+       mScroll.options.scrollX = true;
+       mScroll.options.scrollY = false;
       //下拉刷新
       var scrollSize = 30;
       var myScroll = that.widgets.load;
       //scrollBy可把内容滚动指定的像素数
-      myScroll.scrollBy(0,-scrollSize);
+      //myScroll.scrollBy(0,-scrollSize);
 
       var headImg = $('.head img');
       //刷新状态 renum 记录刷新次数，模拟没有数据时刷新不加载信息
@@ -99,7 +106,7 @@ SPA.defineView('home',{
           return '';
         }
       });
-      myScroll.on('scrollEnd',function(){
+      myScroll.on('scrollEnd',function(e){
         var maxY = this.maxScrollY - this.y;
         //下拉刷新
         if (this.y >= -scrollSize && this.y < 0) {
@@ -204,6 +211,22 @@ SPA.defineView('home',{
          },
          'gotoSearch':function(){
            SPA.open('search');
+         },
+         'loginMenu':function(){
+           if( !$('.m-home').hasClass('moveRight') ){
+             $('.m-home').toggleClass('moveRight');
+             $('.login').toggleClass('zoom-in');
+           }else{
+            $('.m-home').toggleClass('moveLeft');
+            $('.login').toggleClass('zoom-out');
+           }
+         },
+         'gotoLogin':function(){
+             SPA.open('login');
+             setTimeout(function(){
+               $('.login').toggleClass('zoom-out');
+               $('.m-home').toggleClass('moveLeft');
+             },200);
          }
       }
 });

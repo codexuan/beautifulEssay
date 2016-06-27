@@ -23,7 +23,7 @@ spa-view {
     left: 0;
     bottom: 0;
     width: 100%;
-    background: #eceef0 !important;
+    background:#000!important;
     @include flexbox(flex);
     @include flex-direction(column);
 }
@@ -34,4 +34,6 @@ spa-view {
 @import "./module/font.scss";
 @import "./module/review.scss";
 @import "./module/search.scss";
+@import "./module/loginmenu.scss";
+@import "./module/login.scss";
 @import "./module/index.scss";

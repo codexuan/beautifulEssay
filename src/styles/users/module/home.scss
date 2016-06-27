@@ -33,6 +33,14 @@ header{
   @include flexbox();
   @include flex-direction(column);
   position:relative;
+  &.moveRight{
+    @include transition(all 0.5s linear);
+    transform: translateX(70%);
+  }
+  &.moveLeft{
+    @include transition(all 0.5s linear);
+    transform: translateX(0);
+  }
   //nav导航栏
   .nav{
     height:.38rem;
@@ -101,8 +109,8 @@ header{
                 -webkit-transform: rotate(180deg);
                 transition: transform 150ms;
                 -webkit-transition: transform 150ms;
-                height: .15rem;
-                width: .15rem;
+                height: .2rem;
+                width: .2rem;
             }
             .up {
                 transform: rotate(360deg) !important;
@@ -120,8 +128,8 @@ header{
                 /*-webkit-transform: rotate(0deg);*/
                 transition: transform 150ms;
                 -webkit-transition: transform 150ms;
-                height: .15rem;
-                width: .15rem;
+                height: .2rem;
+                width: .2rem;
             }
             .down {
                   //display: block!important;

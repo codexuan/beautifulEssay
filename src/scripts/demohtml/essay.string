@@ -27,11 +27,12 @@
             <span>发表评论</span>
           </li>
           <li><i class="yo-ico">&#xe627;</i></li>
-          <li><i class="yo-ico">&#xe6b5;</i><i class="yo-ico  hide">&#xe602;</i></li>
+          <li><i class="yo-ico collect" action-type="collect">&#xe6b5;</i><i class="yo-ico" action-type="collect" >&#xe602;</i></li>
           <li><i class="yo-ico">&#xe601;</i></li>
         </ul>
     </footer>
   </div>
 </div>
-
+<!-- 弹出框 -->
+<div class="diaTips"></div>
 </div>

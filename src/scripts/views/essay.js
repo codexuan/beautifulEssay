@@ -39,8 +39,19 @@ SPA.defineView('essay',{
       });
     },
     'review':function(){
-        console.log(1);
         SPA.open('review');
+    },
+    'collect':function(){
+        $('.collect').toggleClass('hide');
+        var isHasClass = $('.collect').hasClass('hide');
+        if( isHasClass ){
+          $('.diaTips').text('收藏成功！').addClass('show');
+        }else{
+          $('.diaTips').text('取消收藏！').addClass('show');
+        }
+        setTimer = setTimeout(function(){
+          $('.diaTips').removeClass('show');
+        },2000);
     }
   },
   //

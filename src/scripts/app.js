@@ -7,6 +7,7 @@ require('./views/essay.js');
 require('./views/font.js');
 require('./views/review.js');
 require('./views/search.js');
+require('./views/login.js');
 require('./views/index.js');
 //SPA设置
 SPA.config({

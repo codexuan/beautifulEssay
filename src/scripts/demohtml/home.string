@@ -1,22 +1,39 @@
 
+<!-- 加载提示 -->
 <div class="yo-loading" style="background:url(/beautifulEssay/images/v_iv_launch.png);" ms-visible="isLoading">
     <div>
       <div style="width:.4rem; margin-bottom:.1rem;"><img style="width:100%;" src="/beautifulEssay/images/ajax-loader.gif"/></div>
       <p>加载中...</p>
     </div>
 </div>
-
+<!-- 登录界面 -->
+<div class="login ani">
+  <div class="l-login">
+      <img  action-type="gotoLogin" src="/beautifulEssay/images/z_iv_default_user.png" />
+      <p>您好，请登录</p>
+  </div>
+  <div class="l-list">
+    <ul>
+      <li action-type="gotoLogin"><i class="yo-ico">&#xe62a;</i><span>我的收藏</span></li>
+      <li action-type="gotoLogin"><i class="yo-ico">&#xe627;</i><span>我的评论</span></li>
+      <li action-type="gotoLogin"><i class="yo-ico">&#xe620;</i><span>历史阅读</span></li>
+      <li action-type="gotoLogin"><i class="yo-ico">&#xe72a;</i><span>设置</span></li>
+    </ul>
+    <div></div>
+  </div>
+</div>
+<!-- index主页面 -->
 <div class="m-home" ms-visible="!isLoading">
   <header>
       <ul>
-        <li><i class="yo-ico">&#xe603;</i></li>
+        <li action-type="loginMenu"><i class="yo-ico">&#xe603;</i></li>
         <li>美文美图</li>
         <li action-type="gotoSearch"><i class="yo-ico">&#xe612;</i></li>
       </ul>
   </header>
-<div class="nav">
-  <nav>
-      <div spa-widget="scroll" data-scroll-id="myScroll">
+  <div class="nav">
+   <nav>
+      <div spa-widget="scroll" data-scroll-id="myScroll" class="navDiv">
         <ul class="navList">
           <li class="active" action-type="tapPage">每日美文</li>
           <li action-type="tapPage">精选</li>
@@ -73,11 +90,86 @@
                  </div>
               </section>
            </div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">
+             <section  spa-widget="scroll">
+               <div>
+                 <dl ms-repeat-data="datalist2">
+                   <dt>
+                     <img ms-src="data.imgsrc" alt="">
+                     <dd>
+                       <i ms-text="data.date"></i>
+                       <p ms-text="data.title"></p>
+                       <span>关注<span ms-text="data.focusnum"></span>.评论<span ms-text="data.articlenum"></span>.</span>
+                     </dd>
+                   </dt>
+                 </dl>
+               </div>
+            </section>
+            </div>
+          <div class="swiper-slide">
+              <section  spa-widget="scroll">
+                <div>
+                  <dl ms-repeat-data="datalist2">
+                    <dt>
+                      <img ms-src="data.imgsrc" alt="">
+                      <dd>
+                        <i ms-text="data.date"></i>
+                        <p ms-text="data.title"></p>
+                        <span>关注<span ms-text="data.focusnum"></span>.评论<span ms-text="data.articlenum"></span>.</span>
+                      </dd>
+                    </dt>
+                  </dl>
+                </div>
+             </section>
+          </div>
+          <div class="swiper-slide">
+            <section  spa-widget="scroll">
+              <div>
+                <dl ms-repeat-data="datalist2">
+                  <dt>
+                    <img ms-src="data.imgsrc" alt="">
+                    <dd>
+                      <i ms-text="data.date"></i>
+                      <p ms-text="data.title"></p>
+                      <span>关注<span ms-text="data.focusnum"></span>.评论<span ms-text="data.articlenum"></span>.</span>
+                    </dd>
+                  </dt>
+                </dl>
+              </div>
+           </section>
+          </div>
+          <div class="swiper-slide">
+            <section  spa-widget="scroll">
+              <div>
+                <dl ms-repeat-data="datalist2">
+                  <dt>
+                    <img ms-src="data.imgsrc" alt="">
+                    <dd>
+                      <i ms-text="data.date"></i>
+                      <p ms-text="data.title"></p>
+                      <span>关注<span ms-text="data.focusnum"></span>.评论<span ms-text="data.articlenum"></span>.</span>
+                    </dd>
+                  </dt>
+                </dl>
+              </div>
+           </section>
+          </div>
+          <div class="swiper-slide">
+            <section  spa-widget="scroll">
+              <div>
+                <dl ms-repeat-data="datalist2">
+                  <dt>
+                    <img ms-src="data.imgsrc" alt="">
+                    <dd>
+                      <i ms-text="data.date"></i>
+                      <p ms-text="data.title"></p>
+                      <span>关注<span ms-text="data.focusnum"></span>.评论<span ms-text="data.articlenum"></span>.</span>
+                    </dd>
+                  </dt>
+                </dl>
+              </div>
+           </section>
+          </div>
      </div>
  </div>
 </div>

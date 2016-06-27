@@ -38,7 +38,7 @@ SPA.defineView('review',{
         vm.setTimer = setTimeout(function(){
           $('.mask').removeClass('show');
           that.hide();
-        },4000);
+        },1000);
       }
     }
   }

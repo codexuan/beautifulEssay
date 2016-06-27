@@ -3,7 +3,7 @@
     <ul>
       <li action-type="back" data-page="essay"><i class="yo-ico">&#xe60c;</i></li>
       <li>写评论</li>
-      <li class="login black">登陆</li>
+      <li class="login black">登录</li>
     </ul>
   </header>
   <section>
