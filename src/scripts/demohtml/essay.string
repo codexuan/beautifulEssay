@@ -1,0 +1,37 @@
+<div class="e-cont">
+  <div class="essay">
+  <div class="e-main">
+    <header>
+      <ul>
+        <li action-type="back" data-page="home"><i class="yo-ico">&#xe60c;</i></li>
+        <li></li>
+        <li action-type="DiaFont" data-tag="font"><img src="/beautifulEssay/images/v_iv_font.png"/></li>
+      </ul>
+    </header>
+      <section  class="e-container" spa-widget="scroll">
+        <div id="fontsize">
+        <h2>{{ctTitle}}</h2>
+        <time>{{ctDate}}</time>
+        <article ms-repeat-value="contents">
+          <p ms-text="value"></p>
+        </article>
+        <figure><img ms-src="ctimg"/></figure>
+      </div>
+      </section>
+  </div>
+  <div class="footer">
+    <footer>
+        <ul>
+          <li action-type="review">
+            <i class="yo-ico">&#xe676;</i>
+            <span>发表评论</span>
+          </li>
+          <li><i class="yo-ico">&#xe627;</i></li>
+          <li><i class="yo-ico">&#xe6b5;</i><i class="yo-ico  hide">&#xe602;</i></li>
+          <li><i class="yo-ico">&#xe601;</i></li>
+        </ul>
+    </footer>
+  </div>
+</div>
+
+</div>

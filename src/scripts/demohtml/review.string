@@ -1,0 +1,39 @@
+<div class="r-main">
+  <header>
+    <ul>
+      <li action-type="back" data-page="essay"><i class="yo-ico">&#xe60c;</i></li>
+      <li>写评论</li>
+      <li class="login black">登陆</li>
+    </ul>
+  </header>
+  <section>
+    <form action="">
+      <fieldset>
+        <div>
+          <input type="text" class="username" placeholder="用户名（选填）">
+        </div>
+        <div>
+          <input type="text" class="email" placeholder="邮箱（选填）">
+        </div>
+      </fieldset>
+      <div class="r-div">
+        <textarea name="r-content" autofocus="autofocus" class="r-content" rows="8" cols="40"></textarea>
+      </div>
+    </form>
+    <div class="r-btn" action-type="r-finish">
+      <i class="yo-ico" >&#xe617;</i>
+    </div>
+  </section>
+
+  <!-- 弹出框 -->
+  <div class="diaTips">
+    输入内容不能为空！
+  </div>
+  <div class="mask">
+    <div class="diaSuc">
+        <img class="rotate" src="/beautifulEssay/images/d1.png" alt="">
+        <div class="ht1"></div>
+        <p>评论成功！</p>
+    </div>
+  </div>
+</div>

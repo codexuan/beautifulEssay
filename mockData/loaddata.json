@@ -1,0 +1,37 @@
+{
+  "error":"数据加载错误...",
+  "data":[
+    {
+      "pid":"0010001",
+      "date":"06-21",
+      "imgsrc":"/beautifulEssay/images/h1.jpg",
+      "title":"loading不要等到人生垂暮 且行且珍惜",
+      "focusnum":14,
+      "articlenum":0
+    },
+    {
+      "pid":"0010002",
+      "date":"06-22",
+      "imgsrc":"/beautifulEssay/images/h2.jpg",
+      "title":"loading低头会让你慢慢成长",
+      "focusnum":14,
+      "articlenum":2
+    },
+    {
+      "pid":"0010001",
+      "date":"06-22",
+      "imgsrc":"/beautifulEssay/images/h7.jpg",
+      "title":"loading不要等到人生垂暮 且行且珍惜",
+      "focusnum":14,
+      "articlenum":0
+    },
+    {
+      "pid":"0010001",
+      "date":"06-22",
+      "imgsrc":"/beautifulEssay/images/h3.jpg",
+      "title":"loading不要等到人生垂暮 且行且珍惜",
+      "focusnum":14,
+      "articlenum":0
+    }
+  ]
+}

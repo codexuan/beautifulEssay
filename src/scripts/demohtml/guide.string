@@ -1,0 +1,7 @@
+<div class="swiper-container" id="guide-swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" action-type="gotoIndex">
+      <img src="/beautifulEssay/images/v_iv_launch.png">
+    </div>
+  </div>
+</div>

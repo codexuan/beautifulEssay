@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>美文美图</title>
+</head>
+<link rel="stylesheet" href="/beautifulEssay/prd/styles/users/app.css">
+<body>
+  <script type="text/javascript" src="/beautifulEssay/prd/scripts/app.js"></script>
+  <script type="text/javascript">
+  // 禁止页面滚动
+    document.ontouchmove = function(e){
+        if( e.target.tagName.toUpperCase() !== 'IFRAME'){
+          e.preventDefault();
+        }
+    }
+  </script>
+</body>
+</html>

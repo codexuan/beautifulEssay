@@ -1,0 +1,22 @@
+
+<div class="fonts">
+    <div class="ft-size">
+      <ul>
+        <li>
+          <i>A</i>
+          <b>字体大小</b>
+        </li>
+        <li>
+          <span class="ft-active">
+            <i action-type="tapFont">小</i>
+            <i class="active" action-type="tapFont">中</i>
+            <i action-type="tapFont">大</i>
+            <i action-type="tapFont">特大</i>
+          </span>
+        </li>
+      </ul>
+    </div>
+    <footer class="ft">
+        <div class="finish" action-type="finish">完成</div>
+    </footer>
+</div>

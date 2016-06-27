@@ -1,0 +1,83 @@
+
+<div class="yo-loading" style="background:url(/beautifulEssay/images/v_iv_launch.png);" ms-visible="isLoading">
+    <div>
+      <div style="width:.4rem; margin-bottom:.1rem;"><img style="width:100%;" src="/beautifulEssay/images/ajax-loader.gif"/></div>
+      <p>加载中...</p>
+    </div>
+</div>
+
+<div class="m-home" ms-visible="!isLoading">
+  <header>
+      <ul>
+        <li><i class="yo-ico">&#xe603;</i></li>
+        <li>美文美图</li>
+        <li action-type="gotoSearch"><i class="yo-ico">&#xe612;</i></li>
+      </ul>
+  </header>
+<div class="nav">
+  <nav>
+      <div spa-widget="scroll" data-scroll-id="myScroll">
+        <ul class="navList">
+          <li class="active" action-type="tapPage">每日美文</li>
+          <li action-type="tapPage">精选</li>
+          <li action-type="tapPage">摘抄</li>
+          <li action-type="tapPage">唯美</li>
+          <li action-type="tapPage">治愈</li>
+          <li action-type="tapPage">禅语</li>
+          <li action-type="tapPage">美句</li>
+        </ul>
+      </div>
+      <span><i class="yo-ico">&#xe632;</i></span>
+  </nav>
+</div>
+    <!-- Swiper -->
+  <div class="swiper-container" id="wrapper">
+      <div class="swiper-wrapper" >
+         <div class="swiper-slide">
+            <section  spa-widget="scroll" data-scroll-id="load">
+                <div>
+                  <div class="head">
+                      <img src="/beautifulEssay/images/pull_refresh_arrow.png" width="40" height="40"/>
+                      <span>下拉刷新...</span>
+                  </div>
+                  <dl ms-repeat-data="datalist" action-type="gotoEssay" data-page="essay" ms-attr-data-pid="data.pid">
+                    <dt>
+                      <img ms-src="data.imgsrc" alt="">
+                      <dd>
+                        <i ms-text="data.date"></i>
+                        <p ms-text="data.title"></p>
+                        <span>关注<span ms-text="data.focusnum"></span>.评论<span ms-text="data.articlenum"></span>.</span>
+                      </dd>
+                    </dt>
+                  </dl>
+                  <div class="foot">
+                      <img src="/beautifulEssay/images/pull_refresh_arrow.png" width="40" height="40"/>
+                      <span class="tips">上拉加载更多...</span>
+                  </div>
+                </div>
+             </section>
+           </div>
+           <div class="swiper-slide">
+             <section  spa-widget="scroll">
+                 <div>
+                   <dl ms-repeat-data="datalist2">
+                     <dt>
+                       <img ms-src="data.imgsrc" alt="">
+                       <dd>
+                         <i ms-text="data.date"></i>
+                         <p ms-text="data.title"></p>
+                         <span>关注<span ms-text="data.focusnum"></span>.评论<span ms-text="data.articlenum"></span>.</span>
+                       </dd>
+                     </dt>
+                   </dl>
+                 </div>
+              </section>
+           </div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+     </div>
+ </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="search">
+  <header>
+    <ul>
+      <li><i class="yo-ico">&#xe612;</i></li>
+      <li>
+          <input type="text" class="s-search" placeholder="搜索内容"/>
+      </li>
+      <li action-type="cancel">取消</li>
+    </ul>
+  </header>
+
+  <section>
+    <div class="hot">
+      <h2>热门标签</h2>
+      <div>
+        <ul>
+          <li>[db:tag]</li>
+          <li>黄小平</li>
+          <li>人生</li>
+          <li>唯美</li>
+        </ul>
+        <ul>
+          <li>非主流</li>
+        </ul>
+      </div>
+    </div>
+    <div class="history">
+      <h2>搜索历史</h2>
+      <div>
+        <ul>
+        <li>空</li>
+      </ul>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,120 @@
+@charset "UTF-8";
+.e-cont{
+  width:100%;
+  height:100%;
+  .essay{
+  width:100%;
+  height: 100%;
+  background-color: #fff;
+  @include flexbox();
+  @include flex-direction(column);
+  .e-main{
+    @include flex(1);
+    width:100%;
+    @include flexbox();
+    @include flex-direction(column);
+     header {
+      ul {
+        li {
+          &:last-child{
+            width:.44rem;
+            @include box-sizing(border-box);
+            line-height: normal;
+            padding:.1rem;
+            img{
+              width:100%;
+              height:100%;
+            }
+          }
+        }
+      }
+    }
+    .e-container{
+        @include flex(1);
+        width:100%;
+        div#fontsize{
+          padding:.1rem;
+          font-size:100%;
+          &.font8{
+            font-size:80%!important;
+          }
+          &.font10{
+            font-size:100%!important;
+          }
+          &.font14{
+            font-size:140%!important;
+          }
+          &.font18{
+            font-size:180%!important;
+          }
+          h2{
+          //  font-size: .2rem;
+            padding:.05rem;
+          }
+          time{
+          //  font-size: .12rem;
+          }
+          p{
+          //  font-size: .14rem;
+          //  line-height:.24rem;
+            text-align: center;
+            margin:.1rem 0;
+          }
+          figure{
+            width:100%;
+            img{
+              width:100%;
+              height:100%;
+            }
+          }
+        }
+      }
+  }
+  .footer{
+    width:100%;
+    height:.38rem;
+    position: relative;
+    footer{
+        width:100%;
+        height:.38rem;
+        background-color:#fcfbfb;
+        @include border(1px 0 0 0,#ccc);
+        ul{
+          width:100%;
+          height:100%;
+          @include flexbox();
+          li{
+            @include flex(1);
+            text-align: center;
+            line-height: .38rem;
+            color:#9d9d9d;
+            i{
+              font-size:.18rem;
+            }
+            &:nth-child(1){
+              @include flex(4);
+              text-align: left;
+              i{
+                font-size: .14rem;
+                padding:0 .1rem;
+              }
+            }
+            &:nth-child(3){
+              i{
+                &:nth-child(2){
+                  color:orange;
+                }
+                &.hide{
+                  display: none;
+                }
+                &.show{
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+    }
+  }
+}
+}

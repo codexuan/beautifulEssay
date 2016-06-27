@@ -1,0 +1,167 @@
+@charset "UTF-8";
+@import "../../lib/element/yo-loading";
+//header表头部分内容一样
+header{
+  height:.44rem;
+  width:100%;
+  background-color:#06c1ae;
+    ul{
+      width:100%;
+      height:100%;
+      @include flexbox();
+      li{
+        color:#fff;
+        font-size:.16rem;
+        line-height:.44rem;
+        text-align: center;
+        &:not(:nth-child(2)){
+          width:.44rem;
+        }
+        &:not(:nth-child(2)):active{
+          background:rgba(0,0,0,.3);
+        }
+        &:nth-child(2){
+          @include flex(1);
+        }
+      }
+    }
+}
+
+.m-home{
+  width:100%;
+  height:100%;
+  @include flexbox();
+  @include flex-direction(column);
+  position:relative;
+  //nav导航栏
+  .nav{
+    height:.38rem;
+    nav{
+    width:100%;
+    height:.38rem;
+    background-color:#fcfbfb;
+      @include flexbox();
+      div{
+        @include flex(1);
+        overflow:hidden;
+        height:100%;
+        ul{
+          width:130%;
+          height:100%;
+          @include flexbox();
+          position: relative;
+          li{
+            @include flex(1);
+            // margin:0 .05rem;
+            &:nth-child(1){
+              @include flex(2);
+            }
+            font-size: .14rem;
+            line-height: .38rem;
+            color:#999;
+            text-align: center;
+            @include border(0 0 1px 0,#eee);
+            &.active{
+              color:#06c1ae;
+              @include border(0 0 2px 0,#06c1ae);
+            }
+          }
+      }
+      }
+      span{
+        display: block;
+        width:.38rem;
+        font-size: .28rem;
+        line-height: .32rem;
+        text-align: center;
+        color:#999;
+        @include border(0 0 1px 0,#eee);
+      }
+    }
+  }
+  //内容区
+  #wrapper{
+    @include flex(1);
+    width:100%;
+    background-color: #fff;
+      section{
+          padding-left:.15rem;
+          overflow: hidden;
+          height:100%;
+          // iscroll pull to refresh
+
+          .head {
+                text-align: center;
+                height: .3rem;
+                line-height: .3rem;
+            }
+            .head img {
+                display: inline-block;
+                transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
+                transition: transform 150ms;
+                -webkit-transition: transform 150ms;
+                height: .15rem;
+                width: .15rem;
+            }
+            .up {
+                transform: rotate(360deg) !important;
+                -webkit-transform: rotate(360deg) !important;
+            }
+            .foot {
+                text-align: center;
+                height: .3rem;
+                line-height: .3rem;
+              //  display: none;
+            }
+            .foot img {
+                display: inline-block;
+                /*transform: rotate(0deg);*/
+                /*-webkit-transform: rotate(0deg);*/
+                transition: transform 150ms;
+                -webkit-transition: transform 150ms;
+                height: .15rem;
+                width: .15rem;
+            }
+            .down {
+                  //display: block!important;
+                transform: rotate(180deg) !important;
+                -webkit-transform: rotate(180deg) !important;
+            }
+          // 上拉刷新 下拉加载完
+          dl{
+            width:100%;
+            padding:.1rem;
+            padding-left:0;
+            @include flexbox();
+            @include border(0 0 1px 0,#ccc);
+            dt{
+              width:1.2rem;
+              height:.8rem;
+              img{
+                width:100%;
+                height:100%;
+              }
+            }
+            dd{
+              @include flex(1);
+              padding:0 .3rem 0 .1rem;
+              i{
+                font-size:.12rem;
+                color:#ccc;
+                vertical-align: top;
+              }
+              p{
+                font-size:.16rem;
+                line-height:.2rem;
+              }
+              span{
+                font-size:.12rem;
+                color:#555;
+                vertical-align: bottom;
+              }
+            }
+          }
+        }
+  }
+}
