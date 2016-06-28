@@ -61,8 +61,8 @@ SPA.defineView('essay',{
       var da = this.param;
       //ajax获取数据
       $.ajax({
-      //  url:'/beautifulEssay/mockData/arctile.json',
-        url:'/api/getDataArctile.php',
+        url:'/beautifulEssay/mockData/arctile.json',
+      //  url:'/api/getDataArctile.php',
         type:'get',
         data:{
             id:da.pid

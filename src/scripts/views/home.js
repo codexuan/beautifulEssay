@@ -26,8 +26,8 @@ SPA.defineView('home',{
       that.vm = this.getVM();
       //ajax获取数据
       $.ajax({
-        //url:'/beautifulEssay/mockData/listdata.json',
-        url:'/api/getDataList.php',
+        url:'/beautifulEssay/mockData/listdata.json',
+        //url:'/api/getDataList.php',
         type:'get',
         data:{
           rtype:'origin'
@@ -116,8 +116,8 @@ SPA.defineView('home',{
             headImg.attr('src', '/beautifulEssay/images/ajax-loader.gif');
             //刷新页面数据
             $.ajax({
-              //url:'/beautifulEssay/mockData/refresh.json',
-              url:'/api/getDataList.php',
+              url:'/beautifulEssay/mockData/refresh.json',
+              //url:'/api/getDataList.php',
               type:'get',
               data:{
                 rtype:'refresh'
@@ -153,8 +153,8 @@ SPA.defineView('home',{
 
               //ajax获取数据
               $.ajax({
-                //url:'/beautifulEssay/mockData/listdata.json',
-                url:'/api/getDataList.php',
+                url:'/beautifulEssay/mockData/loaddata.json',
+                //url:'/api/getDataList.php',
                 type:'get',
                 data:{
                   rtype:'more'
