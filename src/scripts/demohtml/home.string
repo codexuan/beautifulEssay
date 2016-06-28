@@ -23,7 +23,7 @@
   </div>
 </div>
 <!-- index主页面 -->
-<div class="m-home" ms-visible="!isLoading">
+<div class="m-home">
   <header>
       <ul>
         <li action-type="loginMenu"><i class="yo-ico">&#xe603;</i></li>

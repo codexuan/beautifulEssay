@@ -1,3 +1,43 @@
 <div class="m-login">
-  sakjdgalsdjgakls
+  <header>
+    <span></span>
+    <span><img action-type="close" src="/beautifulEssay/images/v_btn_close.png" alt=""/></span>
+  </header>
+
+  <section>
+    <div class="l-logo">
+      <img src="/beautifulEssay/images/v_iv_login_icon.png" alt="">
+    </div>
+    <form action="">
+      <div>
+        <input type="text" class="email" placeholder="邮箱">
+      </div>
+      <div>
+        <input type="password" class="pwd" placeholder="密码">
+      </div>
+    </form>
+    <div class="l-loginbtn" action-type="l-login">
+        <span>登录</span>
+    </div>
+    <div class="l-friendlink">
+      <ul>
+        <li><i class="yo-ico">&#xe61f;</i></li>
+        <li><i class="yo-ico">&#xe60d;</i></li>
+        <li><i class="yo-ico">&#xe611;</i></li>
+      </ul>
+    </div>
+
+    <div class="l-regbtn">注册账号</div>
+  </section>
+
+
+  <!-- 弹出框 -->
+  <div class="diaTips"></div>
+  <div class="mask">
+    <div class="diaSuc">
+        <img class="rotate" src="/beautifulEssay/images/d1.png" alt="">
+        <div class="ht1"></div>
+        <p>登录中</p>
+    </div>
+  </div>
 </div>

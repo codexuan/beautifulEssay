@@ -8,7 +8,7 @@
         <li action-type="DiaFont" data-tag="font"><img src="/beautifulEssay/images/v_iv_font.png"/></li>
       </ul>
     </header>
-      <section  class="e-container" spa-widget="scroll">
+      <section  class="e-container" spa-widget="scroll" data-scroll-id="eScroll">
         <div id="fontsize">
         <h2>{{ctTitle}}</h2>
         <time>{{ctDate}}</time>

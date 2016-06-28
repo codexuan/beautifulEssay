@@ -11,7 +11,7 @@ SPA.defineView('font', {
   }],
 
   init:{
-
+      fontScroll : null
   },
 
   bindActions:{
@@ -23,10 +23,15 @@ SPA.defineView('font', {
       $('#fontsize').attr('class',vm.fontArr[index]);
       //改变当前点击项的为active状态
       $('.ft-active').find('i').removeClass('active').eq( index ).addClass('active');
-
+      // fontScroll.refresh;
     },
     'finish':function(){
       this.hide();
     }
   }
+  // bindEvents:{
+  //   show:function(){
+  //     fontScroll = this.param;
+  //   }
+  // }
 });

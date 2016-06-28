@@ -11,17 +11,10 @@ SPA.defineView('essay',{
       vm.ctTitle = '',
       vm.ctDate = '',
       vm.contents = [],
-      vm.ctimg = ''
+      vm.ctimg = '',
+      vm.eScroll = null
     }
   }],
-
-  // modules:[{
-  //   name:'e_content',
-  //   views:['font'],
-  //   //defaultTag:'footer',
-  //   container:'body'
-  // }],
-
   //绑定事件
   bindActions:{
     //关闭当前视图返回上一页
@@ -36,6 +29,7 @@ SPA.defineView('essay',{
           //点击蒙版是否关闭视图
           autoHide:false
         }
+        // param:this.widgets.eScroll
       });
     },
     'review':function(){
@@ -54,7 +48,6 @@ SPA.defineView('essay',{
         },2000);
     }
   },
-  //
   bindEvents:{
     beforeShow:function(){
       var objVM = this.getVM();

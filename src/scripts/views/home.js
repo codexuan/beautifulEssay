@@ -16,14 +16,15 @@ SPA.defineView('home',{
   }],
 
    init:{
-      mySwiper : null
+      mySwiper : null,
+      vm2 : null
   },
 
    bindEvents:{
     beforeShow:function(){
       var that = this;
       //获取vm对象
-      that.vm = this.getVM();
+      vm2 = this.getVM();
       //ajax获取数据
       $.ajax({
         url:'/beautifulEssay/mockData/listdata.json',
@@ -33,56 +34,50 @@ SPA.defineView('home',{
           rtype:'origin'
         },
         success:function( res ){
-          //console.log(res)
           //存储最初数据  用setTimeout 为了查看loading
-        //  setTimeout(function(){
+          setTimeout(function(){
             that.loadDataList = res.data;
-            that.vm.datalist = res.data;
-            that.vm.datalist2 = res.data;
-            that.vm.isLoading = false;
-            /*加了延时器，show函数执行完，
-            *然后再将数据显示在页面，故须在此时改变初始状态
-            */
-            var myScroll = that.widgets.load;
-            //scrollBy可把内容滚动指定的像素数
-            myScroll.scrollBy(0,-30);
-        //  },300);
+            vm2.datalist = res.data;
+            vm2.datalist2 = res.data;
+            vm2.isLoading = false;
+          },300);
         }
       });
     },
     show:function(){
       var that = this;
-
       //创建swiper对象
-      var w1 = 0, w2 = 0;
+      var w1 = $('.navDiv').offset().width;
+      var w2 = $('.navList').offset().width;
+      var len = $('.navList li').length;
+      var disw = (w1-w2)/(len-1);
       this.mySwiper = new Swiper('#wrapper',{
         loop:false,
         //paginationClickable: true,
         onSlideChangeStart:function(swiper){
-          w1 = $('.navDiv').offset().width;
-          w2 = $('.navList').offset().width;
-          var disw = (w1-w2)/('.navList li').length;
           //监听滑动事件
           //console.log(swiper)
           var index = swiper.activeIndex;
           /*先获取到导航栏对象
            *给对应导航栏部分添加高亮
           */
-          disw = disw*index;
-          console.log(disw);
-          $('.navList').css({'left':disw+'px'});
+          var disw1 = disw*(index);
+          $('.navList').css({'left':disw1+'px'});
           $('.navList li').removeClass('active').eq(index).addClass('active');
         }
        });
-        //获取当前滚动对象
+        //获取当前滚动对象  拖动时nav left 值设为0
        var mScroll = that.widgets.myScroll;
        mScroll.options.scrollX = true;
        mScroll.options.scrollY = false;
+       mScroll.on('scroll',function(){
+          $('.navList').css({'left':0});
+       });
       //下拉刷新
       var scrollSize = 30;
       var myScroll = that.widgets.load;
       //scrollBy可把内容滚动指定的像素数
-      //myScroll.scrollBy(0,-scrollSize);
+      myScroll.scrollBy(0,-scrollSize);
 
       var headImg = $('.head img');
       //刷新状态 renum 记录刷新次数，模拟没有数据时刷新不加载信息
@@ -130,7 +125,7 @@ SPA.defineView('home',{
                   return;
                 }
                 var newArray = res.data.concat(that.loadDataList);
-                that.vm.datalist = newArray;
+                vm2.datalist = newArray;
                 that.loadDataList = newArray;
                 myScroll.refresh();
 
@@ -168,8 +163,8 @@ SPA.defineView('home',{
                       return;
                   }
                   var newArray = that.loadDataList.concat(res.data);
-                  console.log(newArray);
-                  that.vm.datalist = newArray;
+                  // console.log(newArray);
+                  vm2.datalist = newArray;
                   that.loadDataList = newArray;
                   myScroll.refresh();
 
@@ -222,11 +217,17 @@ SPA.defineView('home',{
            }
          },
          'gotoLogin':function(){
-             SPA.open('login');
-             setTimeout(function(){
-               $('.login').toggleClass('zoom-out');
-               $('.m-home').toggleClass('moveLeft');
-             },200);
+             SPA.open('login',{
+               ani:{
+                 "name":'actionSheet',
+                 "duration":300
+               }
+             });
+             //侧边栏隐藏 页面恢复初始状态
+            //  setTimeout(function(){
+            //    $('.login').toggleClass('zoom-out');
+            //    $('.m-home').toggleClass('moveLeft');
+            //  },200);
          }
       }
 });
