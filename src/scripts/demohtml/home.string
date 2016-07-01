@@ -9,15 +9,15 @@
 <!-- 登录界面 -->
 <div class="login ani">
   <div class="l-login">
-      <img  action-type="gotoLogin" src="/beautifulEssay/images/z_iv_default_user.png" />
-      <p>您好，请登录</p>
+      <img action-type="gotoLogin" src="/beautifulEssay/images/z_iv_default_user.png" />
+      <p class="l-info"><i></i><span action-type="exitLogin"></span></p>
   </div>
   <div class="l-list">
     <ul>
-      <li action-type="gotoLogin"><i class="yo-ico">&#xe62a;</i><span>我的收藏</span></li>
-      <li action-type="gotoLogin"><i class="yo-ico">&#xe627;</i><span>我的评论</span></li>
-      <li action-type="gotoLogin"><i class="yo-ico">&#xe620;</i><span>历史阅读</span></li>
-      <li action-type="gotoLogin"><i class="yo-ico">&#xe72a;</i><span>设置</span></li>
+      <li><i class="yo-ico">&#xe62a;</i><span>我的收藏</span></li>
+      <li><i class="yo-ico">&#xe627;</i><span>我的评论</span></li>
+      <li><i class="yo-ico">&#xe620;</i><span>历史阅读</span></li>
+      <li><i class="yo-ico">&#xe72a;</i><span>设置</span></li>
     </ul>
     <div></div>
   </div>

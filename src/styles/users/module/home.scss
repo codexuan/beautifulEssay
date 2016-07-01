@@ -92,12 +92,18 @@ header{
     @include flex(1);
     width:100%;
     background-color: #fff;
-      section{
+    @include flexbox();
+    .swiper-wrapper{
+      height:auto;
+      .swiper-slide{
+        height:auto;
+        @include flexbox();
+        section{
+          @include flex(1);
+          width:100%;
           padding-left:.15rem;
           overflow: hidden;
-          height:100%;
-          // iscroll pull to refresh
-
+         // iscroll pull to refresh
           .head {
                 text-align: center;
                 height: .3rem;
@@ -171,5 +177,7 @@ header{
             }
           }
         }
+      }
+    }
   }
 }

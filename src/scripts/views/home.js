@@ -1,6 +1,8 @@
 var homeHtml = require('../demohtml/home.string');
 var swiperAnimate = require('../lib/swiper.animate1.0.2.min.js');
 
+var _ = SPA.util;
+// console.log(_.storage('isLogin'));
 SPA.defineView('home',{
   html:homeHtml,
 
@@ -177,6 +179,15 @@ SPA.defineView('home',{
               });
           }
       });
+    },
+    actived:function(){
+      // console.log( _.storage('isLogin') );
+      //有登陆信息无须再登陆
+      if( !_.storage('isLogin') ){
+           $('p.l-info i').text('请登录').siblings().text('');
+      }else{
+           $('p.l-info i').text('xxx').siblings().text('【退出】');
+         }
     }
   },
   //点击高亮显示
@@ -192,13 +203,6 @@ SPA.defineView('home',{
           this.mySwiper.slideTo($(e.el).index());
         },
         'gotoEssay':function(e,data){
-              /*
-              *当前点击对像data-pid编号存入sessionStorage
-              *历史记录用
-              */
-            var curpid = $(e.el).attr('data-pid');
-            sessionStorage.setItem("data-pid",curpid);
-              //切换视图
               //跳转到第一页
             SPA.open('essay',{
               param:data
@@ -217,17 +221,23 @@ SPA.defineView('home',{
            }
          },
          'gotoLogin':function(){
+           if( !_.storage('isLogin') ){
              SPA.open('login',{
                ani:{
                  "name":'actionSheet',
                  "duration":300
                }
              });
+           }
              //侧边栏隐藏 页面恢复初始状态
             //  setTimeout(function(){
             //    $('.login').toggleClass('zoom-out');
             //    $('.m-home').toggleClass('moveLeft');
             //  },200);
+         },
+         'exitLogin':function(){
+           $('p.l-info i').text('请登录').siblings().text('');
+           _.storage('isLogin',null);
          }
       }
 });

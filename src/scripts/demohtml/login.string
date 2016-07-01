@@ -9,14 +9,14 @@
       <img src="/beautifulEssay/images/v_iv_login_icon.png" alt="">
     </div>
     <form action="">
-      <div>
-        <input type="text" class="email" placeholder="邮箱">
-      </div>
-      <div>
-        <input type="password" class="pwd" placeholder="密码">
-      </div>
+      <label>
+        <input type="text" class="email" placeholder="邮箱" ms-duplex="email">
+      </label>
+      <label>
+        <input type="password" class="pwd" placeholder="密码" ms-duplex="pwd">
+      </label>
     </form>
-    <div class="l-loginbtn" action-type="l-login">
+    <div class="l-loginbtn" action-type="submit">
         <span>登录</span>
     </div>
     <div class="l-friendlink">

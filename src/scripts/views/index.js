@@ -1,5 +1,7 @@
 //引用index.string
 var indexHtml = require('../demohtml/index.string');
+
+
 SPA.defineView('index',{
   html:indexHtml,
   //delegated 实现页面切换
